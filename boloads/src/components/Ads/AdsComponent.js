@@ -5,16 +5,44 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import axios from 'axios';
+
+/**
+ * TODO cercare di mostrare una row con 4 card
+ * quindi poi creare piu row
+ */
 
 export default class AdsComponent extends Component {
   
-  componentDidMount(){
-    axios.get('http://localhost:8080/cartellone')
-    .then(res => console.log(res.data));
-
+  constructor(){
+    super()
+    this.state = {
+      cartelloni : []
+    }
   }
   
+  async componentDidMount() {
+    const response = await fetch(`http://localhost:8080/cartellone`);
+    const json = await response.json();
+    this.setState({ cartelloni: json });
+  }
+
+  cardCartelloniList(){
+    const posData = this.state.positions.map((n) => (
+      <Card>
+              <Card.Img variant="top" src="https://placekitten.com/g/200/300" />
+              <Card.Body>
+                <Card.Title>Cartellone: {n.id}</Card.Title>
+                <Card.Text>
+                  Via: {n.indirizzo}
+                </Card.Text>
+                <Button variant="primary">Prenota</Button>
+              </Card.Body>
+       </Card>
+    ));
+
+    return posData
+  }
+
   render() {
     return (
       <Container>
