@@ -14,7 +14,7 @@ export class NavbarComponent extends Component {
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="All ads" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/adsMapLocation">Choose by location on map</NavDropdown.Item>
-              <NavDropdown.Item href="#">Choose with all description</NavDropdown.Item>
+              <NavDropdown.Item href="/ads">Choose with all description</NavDropdown.Item>
               <NavDropdown.Item href="#">
                 Another action
               </NavDropdown.Item>

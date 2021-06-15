@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import AdsComponent from "./components/Ads/AdsComponent";
 import AdsMapLocation from "./components/Ads/AdsMapLocationComponent";
 import 'leaflet/dist/leaflet.css';
+import axios from 'axios';
 
 
 export default class App extends Component {

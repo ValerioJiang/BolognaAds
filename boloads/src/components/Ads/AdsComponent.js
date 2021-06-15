@@ -5,8 +5,16 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
+import axios from 'axios';
 
 export default class AdsComponent extends Component {
+  
+  componentDidMount(){
+    axios.get('http://localhost:8080/cartellone')
+    .then(res => console.log(res.data));
+
+  }
+  
   render() {
     return (
       <Container>
