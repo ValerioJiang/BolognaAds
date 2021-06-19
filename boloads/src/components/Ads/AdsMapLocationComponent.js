@@ -25,7 +25,7 @@ export default class AdsMapLocation extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch(`http://localhost:8080/cartellone`);
+    const response = await fetch(`http://localhost:8080/cartellone/`);
     const json = await response.json();
     this.setState({ positions: json });
     console.log(this.state);
@@ -47,7 +47,8 @@ export default class AdsMapLocation extends Component {
         </Popup>
       </Marker>
     ));
-
+    
+    console.log(posData)
     return posData
   }
 
@@ -56,7 +57,7 @@ export default class AdsMapLocation extends Component {
       <div style={{ height: "100%" }}>
         <MapContainer
           style={{ height: "100%", width: "100%", position: "fixed" }}
-          center={[45.49972324712414, 12.327143013047305]}
+          center={[44.4953075311209, 11.342994666697493]}
           zoom={13}
         >
           <TileLayer
@@ -66,7 +67,7 @@ export default class AdsMapLocation extends Component {
 
           <Marker
             icon={customMarker}
-            position={[45.60072324712414, 12.400143013047305]}
+            position={[44.4953075311209, 11.342994666697493]} //piazza maggiose
           >
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.

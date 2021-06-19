@@ -12,16 +12,9 @@ export class NavbarComponent extends Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="All ads" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/adsMapLocation">Choose by location on map</NavDropdown.Item>
-              <NavDropdown.Item href="/ads">Choose with all description</NavDropdown.Item>
-              <NavDropdown.Item href="#">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
+            <NavDropdown title="Tutte le pubblicita" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/adsMapLocation">Scegli con la mappa</NavDropdown.Item>
+              <NavDropdown.Item href="/ads">Scegli dall'elenco</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
