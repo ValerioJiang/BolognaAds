@@ -8,6 +8,7 @@ import AdsComponent from "./components/Ads/AdsComponent";
 import AdsMapLocation from "./components/Ads/AdsMapLocationComponent";
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
+import PrenotazioneComponent from "./components/PrenotazioneComponent";
 
 
 export default class App extends Component {
@@ -19,6 +20,8 @@ export default class App extends Component {
         <Route path="/" exact component={HomeComponent} />
         <Route path="/ads" exact component={AdsComponent} />
         <Route path="/adsMapLocation" exact component={AdsMapLocation} />
+        <Route path="/ads/:id/prenotazione" component={PrenotazioneComponent} />
+       
 
       </Router>
     );

@@ -13,7 +13,7 @@ export default class CardAdComponent extends Component {
     return (
       <Col>
       <Card>
-        <Card.Img variant="top" src="https://placekitten.com/g/200/300" />
+        <Card.Img variant="top" src='http://www.gdc.ancitel.it/wp-content/uploads/2019/07/cartellone1.jpg' />
         <Card.Body>
           <Card.Title>Cartellone: {this.props.id}</Card.Title>
           <Card.Text>Via: {this.props.indirizzo}</Card.Text>

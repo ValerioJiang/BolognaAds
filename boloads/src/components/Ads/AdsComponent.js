@@ -6,10 +6,10 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import CardAdComponent from "./CardAdComponent";
+import { Link } from "react-router-dom";
 
 /**
- * TODO cercare di mostrare una row con 4 card
- * quindi poi creare piu row
+ * TODO Risolvere src cardimage
  */
 
 export default class AdsComponent extends Component {
@@ -31,11 +31,15 @@ export default class AdsComponent extends Component {
       
       <Col sm={4}>
         <Card>
-        <Card.Img variant="top" src="https://placekitten.com/g/200/300" />
+        
+        <Card.Img variant="top" src="http://www.gdc.ancitel.it/wp-content/uploads/2019/07/cartellone1.jpg" alt="immagine cartellone" />
           <Card.Body>
             <Card.Title>Cartellone: {item.id}</Card.Title>
             <Card.Text>Via: {item.indirizzo}</Card.Text>
+            
+            <Link to={"ads/"+item.id+"/prenotazione"}>
             <Button variant="primary">Prenota</Button>
+            </Link>
           </Card.Body>
         </Card>
       </Col>
