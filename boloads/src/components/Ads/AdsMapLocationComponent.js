@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import Container from "react-bootstrap/esm/Container";
 import axios from "axios";
+import Button from "react-bootstrap/esm/Button";
+import { Link } from "react-router-dom";
 
 /**
  * TODO: popolare altre location e migliorare popup
@@ -44,6 +46,9 @@ export default class AdsMapLocation extends Component {
           <p> id: {n.id}  </p>
           <p> tipo: {n.tipologia} </p>
           <p> indirizzo:{n.indirizzo}  </p>
+          <Link to={"ads/"+n.id+"/prenotazione"}>
+            <Button variant="primary">Prenota</Button>
+            </Link>
         </Popup>
       </Marker>
     ));
